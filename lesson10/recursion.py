@@ -9,6 +9,29 @@ def add_one(num):
     return add_one(total)
 
 # To inculde number 10 we need to capture the result og add_one(0) and print it
-new_add_one = add_one(0)
+mynewtotal = add_one(10)
 
-print(new_add_one)
+print(mynewtotal)
+
+# Use a loop to do the same thing
+
+# def add_one_loop(num):
+#     while num <= 9:
+#         num += 1
+#         print(num)
+
+def add_one_loop(num):
+    while num < 9:
+        num += 1
+        print(num)
+    return num + 1
+
+print(add_one_loop(10))
+
+
+
+# def factorial(n):
+#     if n == 1:              # Base case
+#         return 1
+#     return n * factorial(n - 1)  # Recursive case
+# print(factorial(5))  # Output: 120
