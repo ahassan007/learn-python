@@ -39,3 +39,22 @@ print(message)
 
 message = f"\n{person.lower()} has {2 * 5 } coins left" # Just use the letter f 
 print(message)
+
+message = f"\n{player['person']} has {2 * 5 } coins left" # Just use the letter f 
+print(message)
+
+
+#######
+# You can pass formatting options
+
+num = 10
+print(f"\n2.5 times {num} is {2.5 * num:.2f}\n") # This will fromat the value of num to two decemal places f stands for fixed
+
+
+
+for num in range(1,11):
+    print(f"2.5 times {num} is {2.5 * num:.2f}") 
+
+
+for num in range(1,11):
+    print(f"{num} divided by 4.52 is {num / 4.52:.2%}") 

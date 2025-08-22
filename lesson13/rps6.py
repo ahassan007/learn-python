@@ -32,20 +32,20 @@ def rps():
 
         computer = int(computerchoice)
 
-        print( "You chose " + str(RPS(player)).replace('RPS.', '') + '.')
-        print( 'Python chose ' + str(RPS(computer)).replace('RPS.', '')  + '.')
+        print( f"\nYou chose {str(RPS(player)).replace('RPS.', '')}.")
+        print( f"Python chose {str(RPS(computer)).replace('RPS.', '')}.\n")
         
         def decide_winner(player, computer): 
             nonlocal player_wins
             nonlocal python_wins
             if player == 1 and computer == 3:
-                play_wins += 1
+                player_wins += 1
                 return '🥳 You win!!'
             elif player == 2 and computer == 1:
-                play_wins += 1
+                player_wins += 1
                 return '🥳 You win!!'
             elif player == 3 and computer == 2:
-                play_wins += 1
+                player_wins += 1
                 return '🥳 You win!!'
             elif player == computer:
                 return '😮 Tie'
@@ -60,15 +60,15 @@ def rps():
         nonlocal game_count 
         game_count += 1
 
-        print("\nGame count: " + str(game_count))
-        print("\nPlayer wins: " + str(player_wins))
-        print("\nPython wins: " + str(python_wins))
+        print(f"\nGame count: {str(game_count)}")
+        print(f"\nPlayer wins: {str(player_wins)}")
+        print(f"\nPython wins: {str(python_wins)}")
 
 
         print("\nPlay again?")
 
         while True:
-            playagain = input("\nY for Yes or \nQ to Quite \n\n")
+            playagain = input("\nY for Yes or \nQ to Quit \n\n")
             if playagain.lower() not in ["y", "q"]:
                 continue
             else:
@@ -88,4 +88,4 @@ def rps():
 
 play = rps()
 
-play(3)
+play()
